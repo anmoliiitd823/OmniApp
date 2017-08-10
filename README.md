@@ -1,24 +1,33 @@
-# README
+# Login with Social Media Using OmniAuth (Ruby on Rails)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Steps for Running the Project on your local machine:
 
-* Ruby version
+* Ruby version: ruby 2.4.0
 
-* System dependencies
+* Rails version: Rails 5.1.3
 
-* Configuration
+* Bootstrap: 3.3.4 (CDN is already add, this note is just for your information. bcoz this version may behave differently now since bootstap 4.0 alpha is already out)
 
-* Database creation
+# Initializers 
 
-* Database initialization
+* For obvious reasons /omni_app/config/initializers/omniauth.rb would not contaion App ID and App Secret 
+```
+Rails.application.config.middleware.use OmniAuth::Builder do
+	provider :twitter, 'Consumer Key (API Key)', 'Consumer Secret (API Secret)'
+	provider :facebook, 'App ID', 'App Secret'
+	provider :github, 'Client ID', 'Client Secret
+'	
+end
+```
 
-* How to run the test suite
+* Replace the strings with app that your created on your own
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+# Have Fun
 
-* ...
+* I learned alot using this tutorial, and i hope the same for you. If you find the efforts helpful star the repository and commit any improvments you like for this project.
+
+* Enjoy Rails!
+
+
